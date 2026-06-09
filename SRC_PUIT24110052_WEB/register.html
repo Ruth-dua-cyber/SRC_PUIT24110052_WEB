@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register / SRC Sports Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="ambient-canvas"></canvas><div class="cursor-light"></div><div class="noise"></div>
+  <div class="site-shell">
+    <header class="nav"><a class="brand" href="index.html"><span class="brand-mark"></span>SRC Academy</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button><nav class="nav-links" aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="activities.html">Activities</a><a href="events.html">Events</a><a href="blog.html">Blog</a><a href="register.html">Register</a><a href="booking.html">Book Online</a></nav><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode"><span class="theme-toggle-dot"></span><span data-theme-label>Dark</span></button><a class="nav-cta" href="booking.html">Book Now</a></header>
+    <main>
+      <section class="hero page-hero"><div class="hero-media"><img src="assets/gymnastics.jpg" alt="Gymnastics athlete"></div><div class="hero-content"><p class="eyebrow">User registration</p><h1>Join The <span class="text-gradient">Academy</span></h1><p class="hero-copy">Register as a student, parent, coach, or community athlete and subscribe to academy email updates.</p></div></section>
+      <section class="section"><div class="container contact-band reveal"><div class="footer-grid"><div><p class="kicker">Registration form</p><h2 data-text-reveal>Email confirmation ready.</h2><p class="lead">This static version simulates confirmation after validation. A future release can connect the same form to a backend, user dashboard, and payment service.</p></div><form class="form" data-academy-form><label for="name">Full name</label><input id="name" name="name" required autocomplete="name" placeholder="Full name"><label for="email">Email address</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="name@example.com"><label for="role">Role</label><select id="role" name="role" required><option value="">Select role</option><option>Student athlete</option><option>Parent or guardian</option><option>Community member</option><option>Coach or trainer</option></select><label for="sport">Preferred sport</label><select id="sport" name="sport" required><option value="">Select sport</option><option>Wrestling</option><option>Taekwondo</option><option>Judo</option><option>Volleyball</option><option>Football</option><option>Rugby</option><option>Ballet</option><option>Table Tennis</option><option>Handball</option><option>Gymnastics</option></select><label class="checkbox-line"><input type="checkbox" name="newsletter"> Subscribe to academy newsletter</label><div class="captcha-row"><span class="captcha-chip" data-captcha-question></span><input data-captcha-answer required inputmode="numeric" aria-label="Verification answer" placeholder="Answer"></div><button class="button magnetic" type="submit">Create Registration</button><p class="form-status" data-form-status aria-live="polite"></p></form></div></div></section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>SRC Sports Academy promotes athletic excellence and community engagement through diverse sports programs.</p>
+        <p><strong>Developer:</strong> Ezekiel Narh, <strong>Student ID:</strong> PUIT/241100052</p>
+        <p><strong>Year:</strong> Level 200 2026</p>
+        <div class="social-links" aria-label="Social media links"><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a><a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="X">x</a><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">yt</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script><script src="script.js"></script>
+</body>
+</html>

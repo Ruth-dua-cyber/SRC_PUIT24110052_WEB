@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>SRC Sports Academy</title>
+  <meta name="description" content="SRC Sports Academy web platform for sports programs, registration, events, booking, and community updates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cursor-light"></div>
+  <div class="noise"></div>
+  <div class="site-shell">
+    <header class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>SRC Academy</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blog</a>
+        <a href="register.html">Register</a>
+        <a href="booking.html">Book Online</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode"><span class="theme-toggle-dot"></span><span data-theme-label>Dark</span></button>
+      <a class="nav-cta" href="booking.html">Book Now</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-media">
+          <video autoplay muted loop playsinline poster="assets/stadium.jpg">
+            <source src="https://videos.pexels.com/video-files/854169/854169-hd_1920_1080_25fps.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Pentecost University SRC initiative</p>
+          <h1>SRC Sports <span class="text-gradient">Academy</span></h1>
+          <p class="hero-copy">A modern, responsive sports platform promoting university excellence, community training, events, achievements, registration, and email-based session booking.</p>
+          <div class="hero-actions">
+            <a class="button magnetic" href="booking.html">Book Training</a>
+            <a class="button magnetic" href="register.html">Join Academy</a>
+            <a class="button magnetic subscribe-button" href="register.html">Subscribe</a>
+          </div>
+          <div class="search-panel" role="search">
+            <input data-site-search aria-label="Search academy pages" placeholder="Search sports, events, registration, booking...">
+            <div class="search-results" data-search-results hidden></div>
+          </div>
+        </div>
+        <div class="scroll-cue"><span class="scroll-line"></span>Explore</div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="kicker">Sports offered</p>
+              <h2 data-text-reveal>New programs meet established excellence.</h2>
+            </div>
+            <p>The academy expands university sport with Wrestling, Taekwondo, Judo, and Volleyball while strengthening Football, Rugby, Ballet, Table Tennis, Handball, and Gymnastics.</p>
+          </div>
+          <div class="program-slider reveal" data-program-slider aria-label="New academy programs image slider">
+            <div class="program-slider-track">
+              <article class="program-slide active" data-tilt="8"><img src="assets/wrestling.jpg" alt="Wrestling athlete silhouette"><div class="program-slide-copy"><span>01 / New Program</span><h3>Wrestling</h3><p>Strength, discipline, tactical movement, and competition readiness.</p></div></article>
+              <article class="program-slide" data-tilt="8"><img src="assets/taekwondo.jpg" alt="Taekwondo athletes sparring"><div class="program-slide-copy"><span>02 / New Program</span><h3>Taekwondo</h3><p>Dynamic kicking, self-control, agility, and martial arts confidence.</p></div></article>
+              <article class="program-slide" data-tilt="8"><img src="assets/judo.jpg" alt="Judo training session"><div class="program-slide-copy"><span>03 / New Program</span><h3>Judo</h3><p>Throws, balance, respect, and safe combat sport fundamentals.</p></div></article>
+              <article class="program-slide" data-tilt="8"><img src="assets/volleyball.jpg" alt="Volleyball match moment"><div class="program-slide-copy"><span>04 / New Program</span><h3>Volleyball</h3><p>Team play, explosive movement, tactical serving, and court awareness.</p></div></article>
+            </div>
+            <div class="slider-controls" aria-label="Program slider controls">
+              <button class="slider-button" type="button" data-slider-prev aria-label="Previous program">Prev</button>
+              <div class="slider-dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+              <button class="slider-button" type="button" data-slider-next aria-label="Next program">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" aria-label="Academy storytelling scene">
+        <div class="story-pin">
+          <div class="scene-layer scene-back"></div>
+          <div class="scene-layer scene-mid"></div>
+          <div class="scene-layer scene-front"></div>
+          <div class="story-copy">
+            <p class="eyebrow">Community impact</p>
+            <h2>Training spaces that connect campus and community.</h2>
+            <p class="lead">Students, coaches, parents, alumni, and local athletes can discover programs, follow fixtures, register interest, and book sessions online.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container gallery">
+          <div class="section-head reveal">
+            <div><p class="kicker">Media coverage</p><h2>Sport in motion, built for scroll.</h2></div>
+            <p>Large image and video panels create the visual storytelling required for a strong sports academy landing page.</p>
+          </div>
+          <article class="zoom-panel"><img src="assets/olympics.jpg" alt="Olympic sports atmosphere"><div class="zoom-caption glass-card"><h3>Competition Culture</h3><p>Showcase achievements, tournament energy, and future sports news coverage.</p></div></article>
+          <article class="zoom-panel"><img src="assets/football.jpg" alt="Football player in action"><div class="zoom-caption glass-card"><h3>Existing Programs</h3><p>Football, Rugby, Ballet, Table Tennis, Handball, and Gymnastics remain core academy pathways.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section video-section">
+        <div class="container">
+          <div class="section-head reveal">
+            <div><p class="kicker">Video hub</p><h2>Training insight and athlete development.</h2></div>
+            <p>Embedded YouTube features give visitors a richer look at conditioning, skill growth, and the habits behind consistent sporting performance.</p>
+          </div>
+          <div class="video-grid reveal-stagger">
+            <article class="video-card">
+              <div class="youtube-frame">
+                <iframe src="https://www.youtube.com/embed/IEmExJaIuDs?rel=0" title="Sports performance training video on YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-copy">
+                <p class="kicker">Conditioning</p>
+                <h3>Staying ready through the season.</h3>
+              </div>
+            </article>
+            <article class="video-card">
+              <div class="youtube-frame">
+                <iframe src="https://www.youtube.com/embed/DUgMB8QIin0?rel=0" title="Triathlon training and endurance sports video on YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-copy">
+                <p class="kicker">Performance</p>
+                <h3>Building stronger training habits.</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container contact-band reveal">
+          <div class="footer-grid">
+            <div>
+              <p class="kicker">Ready to train?</p>
+              <h2>Book a session or register for academy updates.</h2>
+              <p class="lead">The first release uses email-based booking and simulated confirmations, ready for future payment and dashboard integration.</p>
+              <div class="social-links" aria-label="Social media links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="X">x</a><a href="#" aria-label="YouTube">yt</a></div>
+            </div>
+        
+            <div class="hero-actions"><a class="button magnetic" href="booking.html">Book Online</a><a class="button magnetic subscribe-button" href="register.html">Subscribe</a><a class="button magnetic" href="events.html">View Events</a></div>
+          </div>
+        </div>
+      </section>
+      <div class="g-recaptcha" data-sitekey="6LdSOuksAAAAAJBDjL04GAFRLguCYP9u9vOxThC2"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>SRC Sports Academy promotes athletic excellence and community engagement through diverse sports programs.</p>
+        <p><strong>Developer:</strong> Ezekiel Narh, <strong>Student ID:</strong> PUIT/241100052</p>
+        <p><strong>Year:</strong> Level 200 2026</p>
+        <div class="social-links" aria-label="Social media links"><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a><a href="https://www.x.com" target="_blank" rel="noopener noreferrer" aria-label="X">x</a><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">yt</a></div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+ <script>
+// SIMPLE COOKIE CONSENT POPUP
+
+// Check if user already accepted cookies
+if (!localStorage.getItem('cookiesAccepted')) {
+  // Create popup banner
+  let banner = document.createElement('div');
+  banner.innerHTML = `
+    <div style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 450px; background: #1a1a1a; border: 1px solid #333; border-radius: 16px; padding: 20px; z-index: 9999; box-shadow: 0 20px 40px rgba(0,0,0,0.3); font-family: system-ui, sans-serif;">
+      <p style="margin: 0 0 12px 0; color: #fff; font-size: 14px; line-height: 1.5;">
+        🍪 This website uses cookies to remember your preferences and improve your experience.
+      </p>
+      <div style="display: flex; gap: 12px;">
+        <button id="acceptCookies" style="background: #ff6b35; border: none; color: white; padding: 8px 20px; border-radius: 40px; cursor: pointer; font-weight: 600;">Accept</button>
+        <button id="declineCookies" style="background: transparent; border: 1px solid #555; color: #ccc; padding: 8px 20px; border-radius: 40px; cursor: pointer;">Decline</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(banner);
+  
+  // Handle Accept button
+  document.getElementById('acceptCookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    localStorage.setItem('cookiesChoice', 'accepted');
+    banner.remove();
+    console.log('Cookies accepted');
+  });
+  
+  // Handle Decline button
+  document.getElementById('declineCookies').addEventListener('click', function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    localStorage.setItem('cookiesChoice', 'declined');
+    banner.remove();
+    console.log('Cookies declined');
+  });
+}
+</script>
+</body>
+</html>
