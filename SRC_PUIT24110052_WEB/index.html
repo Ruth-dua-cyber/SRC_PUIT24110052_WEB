@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <canvas id="ambient-canvas"></canvas>
@@ -36,9 +35,7 @@
     <main>
       <section class="hero">
         <div class="hero-media">
-          <video autoplay muted loop playsinline poster="assets/stadium.jpg">
-            <source src="https://videos.pexels.com/video-files/854169/854169-hd_1920_1080_25fps.mp4" type="video/mp4">
-          </video>
+          <video muted loop playsinline preload="none" poster="assets/stadium.jpg" data-hero-video data-src="https://videos.pexels.com/video-files/854169/854169-sd_640_360_25fps.mp4" aria-hidden="true"></video>
         </div>
         <div class="hero-content">
           <p class="eyebrow">Pentecost University SRC initiative</p>
@@ -115,7 +112,7 @@
           <div class="video-grid reveal-stagger">
             <article class="video-card">
               <div class="youtube-frame">
-                <iframe src="https://www.youtube.com/embed/IEmExJaIuDs?rel=0" title="Sports performance training video on YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/IEmExJaIuDs?rel=0" title="Sports performance training video on YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
               <div class="video-copy">
                 <p class="kicker">Conditioning</p>
@@ -124,7 +121,7 @@
             </article>
             <article class="video-card">
               <div class="youtube-frame">
-                <iframe src="https://www.youtube.com/embed/DUgMB8QIin0?rel=0" title="Triathlon training and endurance sports video on YouTube" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/DUgMB8QIin0?rel=0" title="Triathlon training and endurance sports video on YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
               <div class="video-copy">
                 <p class="kicker">Performance</p>

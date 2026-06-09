@@ -354,6 +354,7 @@ html[data-theme="dark"] .story-copy .lead {
   inset: 0;
   z-index: -4;
   overflow: hidden;
+  background: url("assets/stadium.jpg") center/cover;
 }
 
 .hero-media video,
@@ -363,6 +364,15 @@ html[data-theme="dark"] .story-copy .lead {
   object-fit: cover;
   transform: scale(1.08);
   filter: saturate(1.04) contrast(1.08);
+}
+
+.hero-media video {
+  opacity: 0;
+  transition: opacity 0.8s var(--ease);
+}
+
+.hero-media video.is-loaded {
+  opacity: 1;
 }
 
 .hero::before {

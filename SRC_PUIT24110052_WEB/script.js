@@ -1,4 +1,6 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const prefersReducedData = Boolean(connection?.saveData || /2g/.test(connection?.effectiveType || ""));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +19,15 @@ if (lenis) {
 
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+function runWhenIdle(callback, timeout = 1800) {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(callback, { timeout });
+    return;
+  }
+
+  window.setTimeout(callback, Math.min(timeout, 900));
+}
+
 function applyTheme(theme) {
   const nextTheme = theme === "dark" ? "dark" : "light";
   document.documentElement.dataset.theme = nextTheme;
@@ -30,6 +41,53 @@ function applyTheme(theme) {
 }
 
 applyTheme(localStorage.getItem("srcAcademyTheme") || "dark");
+
+function initHeroBackgroundVideo() {
+  const video = document.querySelector("[data-hero-video]");
+  if (!video) return;
+
+  const canUseVideo = !prefersReducedMotion && !prefersReducedData && window.matchMedia("(min-width: 760px)").matches;
+  const src = video.dataset.src;
+  if (!canUseVideo || !src) return;
+
+  const source = document.createElement("source");
+  source.src = src;
+  source.type = "video/mp4";
+  video.appendChild(source);
+  video.load();
+
+  video.addEventListener("canplay", () => {
+    video.classList.add("is-loaded");
+    video.play().catch(() => {});
+  }, { once: true });
+}
+
+function initLazyRecaptcha() {
+  const widget = document.querySelector(".g-recaptcha");
+  if (!widget) return;
+
+  function loadRecaptcha() {
+    if (window.grecaptcha || document.querySelector('script[src*="google.com/recaptcha"]')) return;
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    runWhenIdle(loadRecaptcha, 2600);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    observer.disconnect();
+    loadRecaptcha();
+  }, { rootMargin: "420px" });
+
+  observer.observe(widget);
+}
 
 function initCursorLight() {
   const light = document.querySelector(".cursor-light");
@@ -526,4 +584,6 @@ window.addEventListener("DOMContentLoaded", () => {
   initVisitorCounter();
   initCaptchaForms();
   initProgramSlider();
+  initLazyRecaptcha();
+  window.addEventListener("load", () => runWhenIdle(initHeroBackgroundVideo, 2200), { once: true });
 });
